@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/stylesheets/write.css">
+<%- include("partials/header") %>
+    <%- include("partials/nav")%>
+        <div class="sec1">
+            <div class="sec1-form">
+                <form class="write-form" action="/update-blog/<%= blog._id %>" method="post" enctype="multipart/form-data">
+                   
+                    <h1><%= isuser.username %></h1> <br><br>
+                    <input name="heading" class="heading" type="text" placeholder="Subject of the blog" value="<%= blog.heading %>"><br><br> 
+
+                    <input type="file" name="image" id="blog-image">
+
+                    <input type="hidden" name="oldimage" id="blog-image" value="<%= blog.image %>">
+
+                    <br><br>
+
+                    <textarea name="content" class="content" placeholder="Content" cols="30" rows="10" ><%= blog.content %></textarea><br><br>
+                    <button type="submit" id="publish">Update</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("partials/footer") %>

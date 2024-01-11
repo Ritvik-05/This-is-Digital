@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/stylesheets/update.css">
+<%- include("partials/header") %>
+    <%- include("partials/nav")%>
+
+        <div class="sec1">
+            <div class="sec1-form">
+
+                <form class="write-form" action="/write" method="post" enctype="multipart/form-data">
+                   
+                    <h1>NAME</h1> <br><br>
+                    
+                    <input name="heading" class="heading" type="text" placeholder="Subject of the blog"><br><br>
+                    <input type="file" name="image" id="blog-image">
+                    <br><br>
+                    <textarea name="content" class="content" placeholder="Content" cols="30"
+                        rows="10"></textarea><br><br>
+                    <button id="publish">Publish</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("partials/footer") %>
